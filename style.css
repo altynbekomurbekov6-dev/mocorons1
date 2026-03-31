@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --main: #ff7a00;
+    --dark: #111;
+    --light: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f0f0f;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 25px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li {
+    margin-left: 20px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-list a:hover {
+    color: var(--main);
+}
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1551183053-bf91a1d81141') center/cover;
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 50px;
+}
+
+.hero p {
+    margin: 15px 0;
+}
+
+.hero button {
+    padding: 12px 25px;
+    background: var(--main);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    transform: scale(1.1);
+}
+
+.menu {
+    padding: 120px 0;
+    text-align: center;
+}
+
+.menu h2 {
+    margin-bottom: 40px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #1c1c1c;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: 0.4s ease;
+    border-bottom: 3px solid orange;
+}
+
+.card:hover img {
+    transform: scale(1.1) rotate(1deg);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card span {
+    color: var(--main);
+    font-weight: bold;
+}
+
+.card button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    background: var(--main);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.about {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cart {
+    padding: 80px 0;
+    text-align: center;
+}
+
+#cart-items {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.cart-bottom {
+    margin-top: 20px;
+}
+
+.cart button {
+    padding: 10px 20px;
+    background: red;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: black;
+}
+
+@media(max-width:768px) {
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+}

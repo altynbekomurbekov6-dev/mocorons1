@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description" content="Даамдуу макарон - Makaron House">
+    <meta name="keywords" content="макарон, pasta, ресторан, Бишкек">
+    <title>Makaron House</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="container">
+        <h1 class="logo">🍝 Makaron House</h1>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="#hero">Башкы бет</a></li>
+                <li><a href="#menu">Меню</a></li>
+                <li><a href="#about">Биз жөнүндө</a></li>
+                <li><a href="#cart">Корзина</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<main>
+<section id="hero" class="hero">
+    <div class="container">
+        <h2>Даамдуу макарон дүйнөсү</h2>
+        <p>Жаңы, сапаттуу жана сүйүү менен даярдалган</p>
+        <button onclick="scrollToMenu()">Менюну көрүү</button>
+    </div>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="menu">
+    <div class="container">
+        <h2>🍜 Биздин меню</h2>
+
+        <div class="menu-grid">
+
+            <!-- ITEM -->
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0" alt="Spaghetti">
+                <div class="card-body">
+                    <h3>Spaghetti</h3>
+                    <p>Классикалык макарон</p>
+                    <span>150 сом</span>
+                    <button onclick="addToCart('Spaghetti',150)">Кошуу</button>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b" alt="Fettuccine">
+                <div class="card-body">
+                    <h3>Fettuccine</h3>
+                    <p>Крем соусу менен</p>
+                    <span>180 сом</span>
+                    <button onclick="addToCart('Fettuccine',180)">Кошуу</button>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1608756687911-aa1599ab3bd9" alt="Penne pasta">
+                <div class="card-body">
+                    <h3>Penne</h3>
+                    <p>Помидор соусу менен</p>
+                    <span>140 сом</span>
+                    <button onclick="addToCart('Penne',140)">Кошуу</button>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+    <div class="container">
+        <h2>Биз жөнүндө</h2>
+        <p>
+            Makaron House — бул даамдуу макарон сүйүүчүлөр үчүн атайын түзүлгөн заманбап ресторан.
+        </p>
+    </div>
+</section>
+
+<!-- CART -->
+<section id="cart" class="cart">
+    <div class="container">
+        <h2>🛒 Корзина</h2>
+
+        <ul id="cart-items"></ul>
+
+        <div class="cart-bottom">
+            <h3>Жалпы: <span id="total">0</span> сом</h3>
+            <button onclick="clearCart()">Тазалоо</button>
+        </div>
+    </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 Makaron House | Бардык укуктар корголгон</p>
+    </div>
+</footer>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
